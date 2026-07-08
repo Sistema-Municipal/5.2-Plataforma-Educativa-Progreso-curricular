@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma Educativa - Progreso Curricular</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+
+    <div class="dashboard">
+        <div class="header-student">
+            <h1>Panel del Estudiante</h1>
+            <p><strong>Alumno:</strong> Carlos Gómez (ID: 501)</p>
+            <p><strong>Carrera:</strong> Desarrollo de Software</p>
+        </div>
+
+        <div class="progress-section">
+            <div class="progress-labels">
+                <span>Tu progreso actual:</span>
+                <span id="progress-percentage">25%</span>
+            </div>
+            <div class="progress-bar-container">
+                <div id="progress-bar" class="progress-bar" style="width: 25%;"></div>
+            </div>
+        </div>
+
+        <div id="feedback" class="feedback-msg"></div>
+
+        <h2>Módulos de la Carrera</h2>
+        <div class="modules-list" id="modules-container">
+            <div class="module-card completed" data-id="11">
+                <div class="module-info">
+                    <h3>Módulo 11: Introducción a la Programación</h3>
+                    <span class="status-badge">Completado</span>
+                </div>
+                <button class="btn-complete" disabled>Completado</button>
+            </div>
+
+            <div class="module-card" data-id="12">
+                <div class="module-info">
+                    <h3>Módulo 12: Bases de Datos I</h3>
+                    <span class="status-badge">Pendiente</span>
+                </div>
+                <button class="btn-complete" onclick="enviarProgreso(12)">Completar módulo</button>
+            </div>
+
+            <div class="module-card" data-id="13">
+                <div class="module-info">
+                    <h3>Módulo 13: Programación Orientada a Objetos</h3>
+                    <span class="status-badge">Pendiente</span>
+                </div>
+                <button class="btn-complete" onclick="enviarProgreso(13)">Completar módulo</button>
+            </div>
+
+            <div class="module-card" data-id="14">
+                <div class="module-info">
+                    <h3>Módulo 14: Desarrollo Web Frontend</h3>
+                    <span class="status-badge">Pendiente</span>
+                </div>
+                <button class="btn-complete" onclick="enviarProgreso(14)">Completar módulo</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

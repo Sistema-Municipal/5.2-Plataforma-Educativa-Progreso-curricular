@@ -1,0 +1,137 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.dashboard {
+    width: 100%;
+    max-width: 650px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.header-student h1 {
+    margin: 0 0 10px 0;
+    color: #1a73e8;
+}
+
+.header-student p {
+    margin: 4px 0;
+    color: #5f6368;
+}
+
+/* --- SECCIÓN DE LA BARRA DE PROGRESO --- */
+.progress-section {
+    margin: 25px 0;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #e8eaed;
+}
+
+.progress-labels {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #202124;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 16px;
+    background-color: #dadce0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #34a853; /* Verde de éxito */
+    transition: width 0.5s ease-out;
+}
+
+/* --- TARJETAS DE MÓDULOS --- */
+h2 {
+    font-size: 20px;
+    color: #202124;
+    border-bottom: 2px solid #f1f3f4;
+    padding-bottom: 8px;
+}
+
+.module-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #fff;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    transition: all 0.3s;
+}
+
+.module-card h3 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    color: #202124;
+}
+
+.status-badge {
+    font-size: 12px;
+    padding: 3px 8px;
+    background-color: #e8eaed;
+    border-radius: 4px;
+    color: #5f6368;
+    font-weight: 500;
+}
+
+/* Modificación visual cuando pasa a Completado */
+.module-card.completed {
+    background-color: #e6f4ea;
+    border-color: #a3cfbb;
+}
+
+.module-card.completed .status-badge {
+    background-color: #34a853;
+    color: #fff;
+}
+
+/* Botones */
+.btn-complete {
+    background-color: #1a73e8;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn-complete:hover {
+    background-color: #1557b0;
+}
+
+.btn-complete:disabled {
+    background-color: #b8b8b8;
+    cursor: not-allowed;
+}
+
+/* Mensajes de Feedback */
+.feedback-msg {
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+    margin-bottom: 20px;
+    display: none;
+    font-weight: 500;
+}
+.feedback-msg.success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+.feedback-msg.error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
